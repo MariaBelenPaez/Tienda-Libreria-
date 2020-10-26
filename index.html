@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
+
+
+    <title>Libreria</title>
+</head>
+
+<body>
+    <!--📌Comienzo header -->
+    <header class="contenedor-header">
+        <div class="contenedor-icono-header">
+            <div class="contenedor-logo">
+                <p>Libreria Aleph</p>
+                <img src="imagenes/Aleph.svg" alt="" aria-hidden="true" class="logo" />
+
+            </div>
+        </div>
+
+
+
+        <!--📌 Comienzo carrito -->
+
+
+        <button id="apertura-carrito"><i class="fas fa-shopping-cart" aria-label="shopping cart" alt="Shopping-cart"></i>
+            Carrito (2 items)</button>
+        <div class="overlay no-mostrar" id="overlay"></div>
+    </header>
+    <div class="carrito">
+        <div class="carrito-compra">
+            <h2 class="titulo-carrito"> Carrito</h2>
+            <button id="cierre-carrito" class="fas fa-times" aria-label="cierre" alt="cross"></button>
+        </div>
+        <p>2 producto(s) agregados</p>
+
+        <div class="productos-carrito-1-y-2">
+            <section class="producto-carrito linea-divisoria">
+
+                <div class="imagen-carrito">
+                    <img src="imagenes/bolanio.jpeg" alt="bolanio" class="img-carrito" />
+                </div>
+                <div class="info-productos-carrito">
+                    <div class="info-item-carrito carrito-compra">
+                        <h3 class="titulo-carrito">Estrella distante</h3><button class="far fa-trash-alt tacho-carrito" aria-label="trash bin" alt="trash bin"></button>
+                    </div>
+                    <div class="info-item-carrito-2 carrito-compra">
+                        <input type="number" min="0" value="1" class="cantidad-producto-carrito" tabindex="0">
+                        <p>items</p>
+                        <p>$350</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="producto-carrito producto-carrito-2">
+
+                <div class="imagen-producto-carrito">
+                    <img src="imagenes/benjamin.jpg" alt="benjamin" class="imagen-producto-carrito" />
+                </div>
+                <div class="info-productos-carrito">
+                    <div class="info-item-carrito carrito-compra">
+                        <h3 class="titulo-carrito">Walter Benjamin-Cine</h3><button class="far fa-trash-alt tacho-carrito" aria-label="trash bin" alt="trash bin"></button>
+                    </div>
+                    <div class="info-item-carrito-2 carrito-cierre">
+                        <input type="number" min="0" value="1" class="cantidad-producto-carrito" tabindex="0">
+                        <p>items</p>
+                        <p>$500</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="subtotal">
+            <p>Subtotal $850</p>
+        </div>
+
+        <button type="button" class="button" id="boton-comprar">COMPRAR</button>
+
+
+        <button type="button" class="button" id="boton-vaciar">VACIAR</button>
+
+
+    </div>
+    <!-- Fin carrito -->
+    <!-- Comienzo checkout -->
+    <div class="overlay-cuadro-comprar no-mostrar">
+        <div class="cuadro-comprar" id="cuadro-comprar-original">
+            <div class="contenedor-titulo-cuadro-comprar">
+                <h1 class="titulo-cuadro-comprar">Checkout</h1>
+            </div>
+            <div class="resumen-datos-personales-pago">
+                <div class="contenedor-datos-personales-y-pago">
+                    <div class="contenedor-datos-personales">
+                        <div class="contenedor-titulo-datos-personales">
+                            <h3>Datos Personales</h3>
+                        </div>
+                        <div class="contenedor-ingresar-datos-personales linea-divisoria-cuadro-comprar">
+                            <p class="ingresar-datos-personales-1">Nombre y Apellido*</p>
+                            <form class="input-ingresar-datos-personales-1" id="form-cuadro-comprar" name="formulario-email-nombre">
+                                <input type="text" placeholder="ej Jane Doe" name="name-lastname" id="ingresar-nombre-completo" required>
+
+                                <p class="ingresar-datos-personales-2">Email *</p>
+
+                                <input type="email" placeholder="ej janedoe@gmail.com" id="ingresar-email" name="email" required>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="contenedor-opciones-pago">
+                        <div class="contenedor -opciones-pago">
+                            <h3>Opciones de pago</h3>
+                        </div>
+                        <form class="contenedor-botones-opciones-pago">
+                            <label>
+                                <input class="metodos-de-pago" type="radio" name="pago" checked value="debito"
+                                    id="boton-debito"> Tarjeta de débito
+                            </label>
+                            <label>
+                                <input class="metodos-de-pago" type="radio" name="pago" value="credito"
+                                    id="boton-credito"> Tarjeta  de crédito
+                            <label>
+                                <input class="metodos-de-pago" type="checkbox" name="envio" value="delivery"
+                                    id="boton-delivery"> Agregar envío
+                            </label>
+                            <label>
+                                <input class="metodos-de-pago" type="checkbox" name="tarjeta-regalo" value="giftcard"
+                                    id="boton-giftcard"> Tarjeta de descuento
+                            </label>
+                        </form>
+                    </div>
+
+
+                </div>
+
+                <section class="resumen">
+                    <div>
+                        <h3>Subtotal</h2>
+                    </div>
+                    <br>
+
+                    <div class="contenedor-recargos-subtotales">
+                        <div class="contenedor-subtotal">
+                            <p class="subtotal-opciones-pago">Subtotal</p>
+                            <p class="subtotal-precio-opciones-pago">0</p>
+                        </div>
+                        <div class="contenedor-giftcard no-mostrar recargo">
+                            <p class="giftcard-opciones-pago">10% OFF</p>
+                            <p class="giftcard-precio-opciones-pago">0</p>
+                        </div>
+                        <div class="contenedor-delivery no-mostrar recargo">
+                            <p class="delivery-opciones-pago">Envío</p>
+                            <p class="delivery-precio-opciones-pago">0</p>
+                        </div>
+                        <div class="contenedor-recargo no-mostrar recargo">
+                            <p class="recargo-opciones-pago">Descuento Tarjeta</p>
+                            <p class="recargo-precio-opciones-pago">0</p>
+                        </div>
+                    </div>
+
+                    <div class="contenedor-total">
+                        <p class="total-opciones-pago">TOTAL</p>
+                        <p class="total-precio-opciones-pago">0</p>
+                    </div>
+                </section>
+            </div>
+
+
+
+            <div class="botones-formulario-compra">
+
+                <form class="formulario-enviar">
+                    <button type="submit" form="form-cuadro-comprar" value="Submit" class="boton-enviar-formulario">
+                        ENVIAR
+                    </button>
+                    <button type="button" id="boton-seguir-comprando" class="boton-compra">
+                        SEGUIR COMPRANDO
+                    </button>
+                </form>
+            </div>
+            <!-- Fin checkout -->
+
+
+
+
+
+        </div>
+    </div>
+
+    <div class="overlay-cuadro-vaciar no-mostrar">
+
+        <div class="cuadro-vaciar">
+            <div class="contenedor-titulo-cuadro-vaciar">
+                <h2 class="titulo-cuadro-vaciar"> Estás por vaciar el carrito.¿Deseas continuar?</h2>
+            </div>
+            <div class="contenedor-botones-cuadro-vaciar">
+                <button type="button" class="boton-vaciar" id="boton-cancelar">CANCELAR</button>
+                <button type="button" class="boton-rojo-cuadro-vaciar">VACIAR</button>
+            </div>
+        </div>
+    </div>
+    <!-- Fin carrito -->
+
+    </section>
+    </header>
+    <!-- Fin header -->
+    <!-- Comienzo Seccion principal -->
+
+    <section class="banner" alt="imagenes de libros, banner libreria">
+        <h1 class="texto-imagen-principal">Librería Online</h1>
+    </section>
+
+    <section class="contenedor-seccion-principal">
+        <div class="seccion-principal">
+            <!-- Comienzo aside -->
+            <aside class="seccion-aside" id="seccion-aside-mostrada">
+                <form class="formulario-principal" name="form-princ">
+
+                    <div class="contenedor-botones-aside-1">
+                        <h3 class="filtros">FILTROS</h3>
+                        <button class="filters-clear-btn"><i class="fas fa-trash-alt" aria-label="trash bin"
+                                alt="trash bin"></i> LIMPIAR</button>
+                    </div>
+
+                    <div class="contenedor-botones-aside-2">
+                        <h3 class="buscar">BUSQUEDA</h3>
+                        <div class="contenedor-busqueda" class="boton-buscar">
+                            <input type="text" placeholder="Buscar productos" id="buscar-productos">
+                            <i class="fas fa-search" aria-label="Magnifier icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="contenedor-botones-aside-3 formulario">
+                        <h3>CATEGORIAS</h3>
+                        <label for="categorias">
+                            <input type="checkbox" name="categoria" class="categorias" value="historia"> HISTORIA
+                        </label>
+                        <label for="categorias">
+                            <input type="checkbox" name="categoria" class="categorias" value="novela"> NOVELA
+                        </label>
+                        <label for="categorias">
+                            <input type="checkbox" name="categoria" class="categorias" value="filosofia"> FILOSOFIA
+                        </label>
+                        <label for="categorias">
+                            <input type="checkbox" name="categoria" class="categorias" value="poesia"> POESIA
+                        </label>
+                    </div>
+
+                    <div class="contenedor-botones-aside-4 formulario">
+                        <h3>PUNTAJE</h3>
+                        <label>
+                            <input type="checkbox" name="puntaje" class="rating-checkbox" value="5"
+                                aria-label="Cinco estrellas" alt="Five stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i> (5)
+                        </label>
+                        <label>
+                            <input type="checkbox" name="puntaje" class="rating-checkbox" value="4"
+                                aria-label="Cuatro estrellas" alt="Four stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i> (4)
+                        </label>
+                        <label>
+                            <input type="checkbox" name="puntaje" class="rating-checkbox" value="3"
+                                aria-label="Tres estrellas" alt="Three stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i> (3)
+                        </label>
+                        <label>
+                            <input type="checkbox" name="puntaje" class="rating-checkbox" value="2"
+                                aria-label="Dos estrellas" alt="Two stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i> (2)
+                        </label>
+                        <label>
+                            <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="1"
+                                aria-label="Una estrella" alt="One star">
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i> (1)
+                        </label>
+                    </div>
+                </form>
+            </aside>
+            <!-- Fin aside -->
+            <!-- Comienzo productos -->
+
+            <div class="seccion-productos">
+                <div class="contenedor-barra-principal-productos">
+
+                    <p class="cantidad-de-productos">
+                        Mostrando <span class="cantidad-mostrada">12</span> producto(s) de 12
+
+                        <div class="view-buttons">
+                            Ver como
+                            <button type="button" class="view-btn show-grid-btn">
+                            <i class="fas fa-th" aria-label="Grid icon" alt="Grid icon"></i>
+                        </button>
+                            <button type="button" class="view-btn show-list-btn">
+                            <i class="fas fa-list" aria-label="List icon" alt="List icon"></i>
+                        </button>
+                        </div>
+
+                        <div class="boton-responsive-filtro">
+
+                            <button type="button" class="view-btn boton-filtro">
+                            <i class="fas fa-filter" aria-label="Filter icon" alt="Filter icon"></i>
+                            <p class="texto-filters-responsive">Filters</p>
+                        </button>
+
+                        </div>
+
+                </div>
+
+                <section class="contenedor-seccion-productos">
+                    <div>
+                        <article class="producto" data-nombre="El caliban y la bruja Silvia Federici" data-categoria="historia" data-precio="220" data-puntaje="3">
+                            <div class="product-img-container">
+                                <img src="imagenes/federici.jpg" alt="federici feminismo" class="product-img" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-name">El calibán y la bruja</h3>
+                                <h3> Silvia Federici</h3>
+                                <p class="product-price">$220</p>
+                                <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
+                                    quasi.
+                                </p>
+                                <div class="rating" aria-label="Three stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <div class="product-actions">
+                                        <button type="button" class="button button-default boton-agregar-carrito">
+                                            AGREGAR AL CARRITO
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div>
+                        <article class="producto" data-nombre="guerra civil Española" data-categoria="historia" data-precio="500" data-puntaje="5">
+                            <div class="product-img-container">
+                                <img src="imagenes/guerra.jpg" alt="historia espania" class="product-img" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-name">Guerra Civil Española</h3>
+                                <h3> Antony Bodin</h3>
+                                <p class="product-price">$500</p>
+                                <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
+                                    quasi.
+                                </p>
+                                <div class="rating" aria-label="Five stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="product-actions">
+                                    <button type="button" class="button button-default boton-agregar-carrito">
+                                        AGREGAR AL CARRITO
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div>
+                        <article class="producto" data-nombre="malraux condicion humana" data-categoria="novela" data-precio="269" data-puntaje="2">
+                            <div class="product-img-container">
+                                <img src="imagenes/malraux.jpg" class="product-img" alt="malraux" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-name">La condición humana</h3>
+                                <h3> Andre Malraux</h3>
+                                <p class="product-price">$269</p>
+                                <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
+                                    quasi.
+                                </p>
+                                <div class="rating" aria-label="Two stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class="product-actions">
+                                    <button type="button" class="button button-default boton-agregar-carrito">
+                                        AGREGAR AL CARRITO
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div>
+                        <article class="producto" data-nombre="la pajara en el ojo ajeno pizarnik" data-categoria="poesia" data-precio="299" data-puntaje="3">
+                            <div class="product-img-container">
+                                <img src="imagenes/pizarnik.jpg" class="product-img" alt="pajara pizarnik" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-name">La pájara en el ojo ajeno</h3>
+                                <h3>Alejandra Pizarnik</h3>
+                                <p class="product-price">$299</p>
+                                <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
+                                    quasi.
+                                </p>
+                                <div class="rating" aria-label="Three stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class="product-actions">
+                                    <button type="button" class="button button-default boton-agregar-carrito">
+                                        AGREGAR AL CARRITO
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div>
+                        <article class="producto" data-nombre="Estrella distante Roberto Bolaño" data-categoria="novela" data-precio="499" data-puntaje="5">
+                            <div class="product-img-container">
+                                <img src="imagenes/bolanio.jpeg" class="product-img" alt="bolanio estrella distante" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-name">Estrella distante</h3>
+                                <h3> Roberto Bolaño</h3>
+                                <p class="product-price">$499</p>
+                                <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
+                                    quasi.
+                                </p>
+                                <div class="rating" aria-label="Five stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="product-actions">
+                                    <button type="button" class="button button-default boton-agregar-carrito">
+                                        AGREGAR AL CARRITO
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div>
+                        <article class="producto" data-nombre="silvya plath campana cristal" data-categoria="poesia" data-precio="130" data-puntaje="1">
+                            <div class="product-img-container">
+                                <img src="imagenes/sylvia.jpg" class="product-img" alt="sylvia plath" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-name">La campana de cristal</h3>
+                                <h3>Sylvia Plath</h3>
+                                <p class="product-price">$130</p>
+                                <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
+                                    quasi.
+                                </p>
+                                <div class="rating" aria-label="One star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class="product-actions">
+                                    <button type="button" class="button button-default boton-agregar-carrito">
+                                        AGREGAR AL CARRITO
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div>
+                        <article class="producto" data-nombre="suicidas di benedetto" data-categoria="novela" data-precio="199" data-puntaje="3">
+                            <div class="product-img-container">
+                                <img src="imagenes/suicidas.png" class="product-img" alt="los suicidas di benedetto" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-name">Los suicidas </h3>
+                                <h3> Antonio Di benedetto</h3>
+                                <p class="product-price">$199</p>
+                                <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
+                                    quasi.
+                                </p>
+                                <div class="rating" aria-label="Three stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class="product-actions">
+                                    <button type="button" class="button button-default boton-agregar-carrito">
+                                        AGREGAR AL CARRITO
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div>
+                        <article class="producto" data-nombre="Macbeth William Shakespeare" data-categoria="novela" data-precio="350" data-puntaje="2">
+                            <div class="product-img-container">
+                                <img src="imagenes/macbeth.jpg" class="product-img" alt="macbeth shakespeare" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-name">Macbeth</h3>
+                                <h3>William Shakespeare</h3>
+                                <p class="product-price">$350</p>
+                                <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
+                                    quasi.
+                                </p>
+                                <div class="rating" aria-label="Two stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class="product-actions">
+                                    <button type="button" class="button button-default boton-agregar-carrito">
+                                        AGREGAR AL CARRITO
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div>
+                        <article class="producto" data-nombre="las flores del mal baudelaire" data-categoria="poesia" data-precio="325" data-puntaje="4">
+                            <div class="product-img-container">
+                                <img src="imagenes/baudelaire.jpg" class="product-img" alt=" flores del mal baudelaire" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-name">Las flores del mal </h3>
+                                <h3>Charles Baudelaire</h3>
+                                <p class="product-price">$325</p>
+                                <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
+                                    quasi.
+                                </p>
+                                <div class="rating" aria-label="Four stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class="product-actions">
+                                    <button type="button" class="button button-default boton-agregar-carrito">
+                                        AGREGAR AL CARRITO
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div>
+                        <article class="producto" data-nombre="cine walter benjamin" data-categoria="filosofia" data-precio="199" data-puntaje="3">
+                            <div class="product-img-container">
+                                <img src="imagenes/benjamin.jpg" class="product-img" alt=" benjamin filosofia" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-name">Escritos sobre Cine</h3>
+                                <h3> Walter Benjamin</h3>
+                                <p class="product-price">$199</p>
+                                <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
+                                    quasi.
+                                </p>
+                                <div class="rating" aria-label="Three stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class="product-actions">
+                                    <button type="button" class="button button-default boton-agregar-carrito">
+                                        AGREGAR AL CARRITO
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div>
+                        <article class="producto" data-nombre="foucault vigilar" data-categoria="filosofia" data-precio="120" data-puntaje="4">
+                            <div class="product-img-container">
+                                <img src="imagenes/foucault.jpg" class="product-img" alt="vigilar y castigar foucault" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-name">Vigilar y Castigar</h3>
+                                <h3>Michel Foucault</h3>
+                                <p class="product-price">$120</p>
+                                <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
+                                    quasi.
+                                </p>
+                                <div class="rating" aria-label="Four stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class="product-actions">
+                                    <button type="button" class="button button-default boton-agregar-carrito">
+                                        AGREGAR AL CARRITO
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div>
+                        <article class="producto" data-nombre="odas john keats" data-categoria="poesia" data-precio="399" data-puntaje="5">
+                            <div class="product-img-container">
+                                <img src="imagenes/KEATS.jpg" class="product-img" alt="Odas y sonetos John Keats" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-name">Odas y sonetos </h3>
+                                <h3>John Keats</h3>
+                                <p class="product-price">$399</p>
+                                <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
+                                    quasi.
+                                </p>
+                                <div class="rating" aria-label="Five stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="product-actions">
+                                    <button type="button" class="button button-default boton-agregar-carrito">
+                                        AGREGAR AL CARRITO
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                </section>
+            </div>
+            <!-- Fin productos -->
+        </div>
+    </section>
+    <!-- Fin seccion principal -->
+
+    <!-- Comienzo footer -->
+    <div class="contenedor-footer"></div>
+    <footer>
+        <img src="imagenes/Aleph.svg" alt="" aria-hidden="true" class="logo" />
+        <p>Libreria Aleph - Gracias por visitarnos </p>
+        </div>
+    </footer>
+    <!-- Fin footer -->
+
+    <!-- Comienzo aside responsive -->
+    <div class="overlay-seccion-aside-responsive no-mostrar"></div>
+    <div class="seccion-aside-responsive">
+        <form class="formulario-principal" name="form-princ">
+            <div class="contenedor-boton-cerrar-aside-responsive">
+                <button type="button" id="boton-cerrar-aside-responsive" class="fas fa-times" aria-label="cross" alt="cross"></button>
+            </div>
+            <div class="contenedor-botones-aside-responsive-1">
+
+                <h3 class="filtros">FILTROS</h3>
+                <button class="filters-clear-btn"><i class="fas fa-trash-alt" aria-label="trash bin" alt="trash bin"></i> LIMPIAR</button>
+            </div>
+
+            <div class="contenedor-botones-aside-responsive-2">
+                <h3 class="buscar">BUSCAR</h3>
+                <div class="contenedor-busqueda" class="boton-buscar">
+                    <input type="text" placeholder="Buscar Productos" id="buscar-productos-responsive">
+                    <i class="fas fa-search" aria-label="Magnifier icon" alt="Magnifier icon"></i>
+                </div>
+            </div>
+
+            <div class="contenedor-botones-aside-responsive-3 formulario">
+                <h3>CATEGORIAS</h3>
+                <label for="categorias">
+                          <input type="checkbox" name="categoria" class="categorias checkbox1" value="novela"> NOVELA
+                      </label>
+                <label for="categorias">
+                          <input type="checkbox" name="categoria" class="categorias checkbox1" value="historia"> HISTORIA
+                      </label>
+                <label for="categorias">
+                          <input type="checkbox" name="categoria" class="categorias checkbox1" value="historieta"> HISTORIETA
+                      </label>
+                <label for="categorias">
+                          <input type="checkbox" name="categoria" class="categorias checkbox1" value="filosofia"> FILOSOFIA
+                      </label>
+            </div>
+
+            <div class="contenedor-botones-aside-responsive-4 formulario">
+                <h3>RATING</h3>
+                <label>
+                          <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="5" aria-label="Five stars" alt="Five stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i> (5)
+                      </label>
+                <label>
+                          <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="4" aria-label="Four stars" alt="Four stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="far fa-star"></i> (4)
+                      </label>
+                <label>
+                          <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="3" aria-label="Three stars" alt="Three stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i> (3)
+                      </label>
+                <label>
+                          <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="2" aria-label="Two stars" alt="Two stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i> (2)
+                      </label>
+                <label>
+                          <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="1" aria-label="One star" alt="One star">
+                          <i class="fas fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i> (1)
+                      </label>
+            </div>
+        </form>
+    </div>
+    <!-- Fin aside responsive -->
+
+    <script src="index.js"></script>
+</body>
+
+</html>
